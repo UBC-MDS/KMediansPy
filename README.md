@@ -1,10 +1,10 @@
 
 | **Team Members** |
 | -- |
-| (Sreya Guha)[https://github.com/sreyaguha] |
-| (Ayla Perason)[https://github.com/aylapear] |
-| (Fan Nei)[]  |
-| (Pan Ting)[] |
+| [Sreya Guha](https://github.com/sreyaguha) |
+| [Ayla Pearson](https://github.com/aylapear) |
+| [Fan Nei](https://github.com/Jamienie)  |
+| [Ting Pan](https://github.com/panntingg) |
 
 # About
 

@@ -3,7 +3,7 @@
 | -- |
 | [Sreya Guha](https://github.com/sreyaguha) |
 | [Ayla Pearson](https://github.com/aylapear) |
-| [Fan Nei](https://github.com/Jamienie)  |
+| [Fan Nie](https://github.com/Jamienie)  |
 | [Ting Pan](https://github.com/panntingg) |
 
 # About

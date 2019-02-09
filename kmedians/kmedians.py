@@ -1,3 +1,10 @@
+# Feb 9, 2019
+# Sreya Guha, Ayla Pearson, Fan Nie, Ting Pan
+#
+# This script is the package for KMediansPy
+
+
+
 def distance(X, medians):
     """
     Calculates the Manhanttan distance between the medians and every point in the dataset

@@ -8,13 +8,7 @@ import numpy as np
 import pytest
 
 
-# In[137]:
-
-
 X = np.array([[1, 2],[9, 8],[1.5, 2]])
-
-
-# In[109]:
 
 
 def test_toy_data():
@@ -32,9 +26,6 @@ def test_toy_data():
     assert np.array_equal(np.unique(labels), np.array([0, 1]))
 
 
-# In[124]:
-
-
 def test_input_k(data, k):
 
     """
@@ -43,9 +34,6 @@ def test_input_k(data, k):
 
     """
     assert type(k) == int
-
-
-# In[130]:
 
 
 def test_clusters_labels(data, k):
@@ -60,9 +48,6 @@ def test_clusters_labels(data, k):
     assert np.equal(len(np.unique(labels)), k)
 
 
-# In[131]:
-
-
 def test_number_of_clusters(data, k):
 
     """
@@ -73,4 +58,16 @@ def test_number_of_clusters(data, k):
     medians, labels = KMedians(data, k)
     
     assert np.equal(np.size(medians[0],0), k)
+    
+    
+def test_edge_case_1(data, k):
+
+    """
+
+    Tests that the algorithm has more rows than the number of clusters 
+
+    """
+    
+    assert.greaterThan(len(data), k, "Error!")
+    
 

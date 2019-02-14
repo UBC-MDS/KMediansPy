@@ -1,61 +1,13 @@
-# Feb 9, 2019
+# Feb 2019
 # Sreya Guha, Ayla Pearson, Fan Nie, Ting Pan
 #
-# This script is the package for KMediansPy
+# This script is the summary function in the 
+
 
 import numpy as np
 import pandas as pd
+from distance import distance
 
-# remove this one once we switch out the distance function
-from scipy.spatial import distance
-
-
-
-
-def distance(X, medians):
-    """
-    Calculates the Manhanttan distance between the medians and every point in the dataset
-    
-    Parameters
-    ----------
-    x: 2D array
-       The dataset being clustered 
-       
-    medians: 2D array
-       Medians of the clusters
-    
-    Returns
-    -------
-    dist: 2D array
-        Distance between each point and each median
-    
-    """
-    return dist
-
-
-def kmedians(X, num_clusters):
-    """
-    Groups the points in your dataset ,X, into the desired number of clusters, based on the median distance between the points. 
-    This function uses random intilization to assign the first medians and then will update the medians and 
-    the group assignments until the assignment does not change. 
-    
-    Parameters
-    ----------
-    X: 2D array
-       The dataset being clustered
-    
-    num_clusters: integer
-      The desired number of clusters 
-    
-    Returns
-    -------
-    medians: 2D array
-        The coordinates of the medians for each cluster
-    
-    labels: 1D array
-        Array that has the assignment of the cluster for each point in the dataset 
-    """
-    return medians, labels
 
 
 def summary(x, medians, labels):
@@ -114,7 +66,8 @@ def summary(x, medians, labels):
         med_dat =np.array([medians[i]])
     
     # need to switch out for our distance function
-        dist_test = distance.cdist(myarray, med_dat, 'minkowski', p=1)
+        #dist_test = distance.cdist(myarray, med_dat, 'minkowski', p=1)
+        dist_test = distance(myarray, med_dat)
     
     # calculate average, max and min
         avg_distance.append(np.mean(dist_test))

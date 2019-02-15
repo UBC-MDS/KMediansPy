@@ -3,11 +3,9 @@
 #
 # This script is the package for KMediansPy
 
-#import numpy as np
-
 import numpy as np
 
-def distance(X, medians):
+def distance(x, medians):
     """
     Calculates the Manhanttan distance between the medians and every point in the dataset
 

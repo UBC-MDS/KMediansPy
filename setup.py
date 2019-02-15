@@ -8,7 +8,7 @@ setup(
     url='https://github.com/UBC-MDS/KMediansPy',
     license='LICENSE.txt',
     description='K Medians Clustering Algorithm and table summary',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "numpy = 1.15.1",
         "pytest =3.8.0",

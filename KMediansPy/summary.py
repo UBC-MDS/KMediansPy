@@ -6,7 +6,7 @@
 
 import numpy as np
 import pandas as pd
-from Kmedians.distance import distance
+from KMediansPy.distance import distance
 
 
 

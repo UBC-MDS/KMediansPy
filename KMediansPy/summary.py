@@ -6,7 +6,7 @@
 
 import numpy as np
 import pandas as pd
-from distance import distance
+from KMediansPy.distance import distance
 
 
 
@@ -19,7 +19,7 @@ def summary(x, medians, labels):
 
     Parameters
     ----------
-    x: 2D array
+    x: 2D array of order mx2
        dataset, must only be 2D (x & y coordinates)
 
     medians: 2D array
@@ -64,9 +64,7 @@ def summary(x, medians, labels):
             new_list.append(x[j])
         myarray = np.array(new_list)
         med_dat =np.array([medians[i]])
-
-    # need to switch out for our distance function
-        #dist_test = distance.cdist(myarray, med_dat, 'minkowski', p=1)
+        # calculate distance between median and points in cluster
         dist_test = distance(myarray, med_dat)
 
     # calculate average, max and min

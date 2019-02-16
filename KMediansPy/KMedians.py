@@ -42,7 +42,7 @@ def KMedians(x, n_cluster):
     prev_medians =np.zeros((m,l),dtype='int32') #assign initial centers to clusters
     while (medians!= prev_medians).any(): #loop till centers do not change
         for i in range(0, n_cluster):
-            dist = distance(x, medians, 'minkowski', p=1)
+            dist = distance(x, medians)
             labels = np.argmin(dist, axis=1)
             u[labels, range(0,n)] = 1
             medians[i] = np.median(x[u[i]==1],axis=0) #assign new medians

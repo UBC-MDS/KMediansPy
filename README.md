@@ -8,7 +8,7 @@
 
 # About
 
-Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). In k-medians clustering, we partition `n` observations into `k` clusters. It calculates the median for each cluster to determine its centroid. The `kmedians` package performs k-medians clustering on the dataset entered by the users and returns the clustered data.. This can prove to be an extremely beneficial package as k-medians is more robust to outliers than the arithmetic mean(k-means). The objective of this package is to provide a robust clustering method to solve some of the issues related to outliers and missing data.
+Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). In k-medians clustering, we partition `n` observations into `k` clusters. It calculates the median for each cluster to determine its centroid. The `KMediansPy` package performs k-medians clustering on the dataset entered by the users and returns the clustered data.. This can prove to be an extremely beneficial package as k-medians is more robust to outliers than the arithmetic mean(k-means). The objective of this package is to provide a robust clustering method to solve some of the issues related to outliers and missing data.
 
 # Functions included
 
@@ -21,10 +21,10 @@ The three main functions in the package are :
       2. An `pxk` array of `p` original observations in an `k`-dimensional space
       It returns a `mxp` distance matrix. For each `i` and `j`, the mteric `distance(u=X[i], v=Y[j])` is computed and stored in the `ij`th entry
 
-2. `kmedian` function
+2. `KMedians` function
 
       - A quick implementation of k-medians. It takes as input
-        1. A 2D array of data
+        1. A 2D array of order mx2
         2. The desired number of clusters
       It returns
         1. A 2D array of the medians
@@ -32,7 +32,7 @@ The three main functions in the package are :
 
 3. `summary` function
 
-      - This function generates the descriptive statistics that summarize the implementation of the `kmedians` function on the input data. It returns a           dataframe that contains information about the model run such as the number of clusters, the number of points in each cluster, the inter and intra           cluster distance
+      - This function generates the descriptive statistics that summarize the implementation of the `KMedians` function on the input data. It returns a      dataframe that contains information about the model run such as the number of clusters, the number of points in each cluster, the inter and intra       cluster distance
 
 
 # Usage Scenario
@@ -40,10 +40,48 @@ The three main functions in the package are :
 k-median is more robust to noise and outliers as compared to k-means. Let's look at an example, suppose we want to cluster on one dimension with k=2. One cluster has most of its members around 1000 and the other around -1000; but there is an outlier (or noise) at 100000. It obviously belongs to the cluster around 1000 but k-means will put the center point away from 1000 and towards 100000. This may even make some of the members of the 1000 cluster (say a member with value 500) to be assigned to the -1000 cluster. k-median will select one of the members around 1000 as the median, it'll probably select one that is bigger than 1000, but it will not select an outlier.
 Thus we would want to use
 
-# Existing packages in the Python environment
+# Installation
 
-`pyclustering` : pyclustering is a Python, C++ data mining library (clustering algorithm, oscillatory networks, neural networks). The library provides Python and C++ implementations (via CCORE library) of each algorithm or model (e.g. K-Means, K-Means++, K-Medians, etc.)
+```bash
+pip install git+https://github.com/UBC-MDS/KMediansPy.git
 
-# Subject to change
+```
 
-The above ideas are presented as a part of the initial proposal. However, they could be subject to change in the following milestones based on the project timeline or technical complexity.
+# Usage
+
+```
+>> from KMediansPy.distance import distance
+>> from KMediansPy.KMedians import KMedians
+>> from KMediansPy.summary import summary
+
+>> X = np.array([[1, 2],[5, 4]])
+>> medians = np.array([[1, 2],[5, 4]])
+>> dist = distance(X, medians)
+>> print(dist)
+>> [[0 6]
+ [6 0]]
+
+>> X = np.array([[1, 2],[5, 4],[9, 8]])
+>> k = 2
+>> KMedians(X, 2)
+>> [[3 3]
+ [9 8]]
+>> [0 0 1]
+
+>> X = np.array([[1, 2],[5, 4]])
+>> med = np.array([[1, 2]])
+>> labels = [0, 0]
+>> y = summary(X, med, labels )
+>> print(y)
+
+>>	Cluster Label	| X Coordinates of Final Medians | Y Coordinates of Final Medians	| Number of Points in a Cluster	| Average Distance within Cluster
+>>  0	            | 0	                             | 1	                            | 2	                            | 2	                              
+ ```
+
+# Run tests
+
+From root directory, run all test files in terminal:
+
+```
+python -m pytest
+```

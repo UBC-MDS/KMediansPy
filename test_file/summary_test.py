@@ -10,7 +10,8 @@ from KMediansPy.summary import summary
 from KMediansPy.KMedians import KMedians
 
 
-# In[3]:
+data = np.array([[1, 2],[4, 5],[6, 2],[9, 8]])
+k = 2
 
 
 def test_toy_data_summary():
@@ -23,31 +24,30 @@ def test_toy_data_summary():
     df = summary(X, medians, labels)
 
     assert np.equal(df.shape[0], 2)
-    assert np.equal(df['Number of Points in a Cluster'].sum(), 4)   
+    assert np.equal(df['Number of Points in a Cluster'].sum(), 4)
     assert np.equal(df['Maxiumum Distance within Cluster'].sum(), 3.0)
     assert np.equal(df['Minimum Distance within Cluster'].sum(), 2.0)
     assert np.equal(round(df['Average Distance within Cluster'].sum(), 2), 2.67)
 
 
-def test_number_of_points_in_clusters(data, k):
+def test_number_of_points_in_clusters():
     """
-    Tests that the algorithm preserves the total number of data points 
+    Tests that the algorithm preserves the total number of data points
     """
-    
+
     medians, labels = KMedians(data, k)
     df = summary(data, medians, labels)
-    
+
     assert np.equal(df['Number of points in a cluster'].sum(), data.shape[0])
 
 
 
-def test_number_of_clusters(data, k):
+def test_number_of_clusters():
     """
-    Tests that the algorithm correctly predicts the total number of clusters 
+    Tests that the algorithm correctly predicts the total number of clusters
     """
-    
+
     medians, labels = KMedians(data, k)
     df = summary(data, medians, labels)
-    
-    assert np.equal(len(df['Cluster Label']), k)
 
+    assert np.equal(len(df['Cluster Label']), k)

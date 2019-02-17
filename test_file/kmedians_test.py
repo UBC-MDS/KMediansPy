@@ -8,7 +8,8 @@ import numpy as np
 import pytest
 
 
-X = np.array([[1, 2],[9, 8],[1.5, 2]])
+data = np.array([[1, 2],[9, 8],[1.5, 2]])
+k = 2
 
 
 def test_toy_data():
@@ -26,7 +27,7 @@ def test_toy_data():
     assert np.array_equal(np.unique(labels), np.array([0, 1]))
 
 
-def test_input_k(data, k):
+def test_input_k():
 
     """
 
@@ -36,7 +37,7 @@ def test_input_k(data, k):
     assert type(k) == int
 
 
-def test_clusters_labels(data, k):
+def test_clusters_labels():
 
     """
 
@@ -48,7 +49,7 @@ def test_clusters_labels(data, k):
     assert np.equal(len(np.unique(labels)), k)
 
 
-def test_number_of_clusters(data, k):
+def test_number_of_clusters():
 
     """
 
@@ -60,7 +61,7 @@ def test_number_of_clusters(data, k):
     assert np.equal(np.size(medians[0],0), k)
 
 
-def test_edge_case_1(data, k):
+def test_edge_case_1():
 
     """
 

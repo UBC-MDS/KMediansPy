@@ -2,8 +2,9 @@ from setuptools import setup
 
 setup(
     name='KMediansPy',
-    version='0.1',
+    version='1.0',
     author='S. Guha, A. Pearson, F. Nie, T. Pan',
+    author_email='NA',
     packages=['KMediansPy'],
     url='https://github.com/UBC-MDS/KMediansPy',
     license='LICENSE.txt',

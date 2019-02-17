@@ -30,7 +30,7 @@ def test_input_k(data, k):
 
     """
 
-    Tests that the algorithm inputs `k` as an integer 
+    Tests that the algorithm inputs `k` as an integer
 
     """
     assert type(k) == int
@@ -44,7 +44,7 @@ def test_clusters_labels(data, k):
 
     """
     medians, labels = KMedians(data, k)
-    
+
     assert np.equal(len(np.unique(labels)), k)
 
 
@@ -52,22 +52,20 @@ def test_number_of_clusters(data, k):
 
     """
 
-    Tests that the algorithm forms the correct number of clusters 
+    Tests that the algorithm forms the correct number of clusters
 
     """
     medians, labels = KMedians(data, k)
-    
+
     assert np.equal(np.size(medians[0],0), k)
-    
-    
+
+
 def test_edge_case_1(data, k):
 
     """
 
-    Tests that the algorithm has more rows than the number of clusters 
+    Tests that the algorithm has more rows than the number of clusters
 
     """
-    
-    assert.greaterThan(len(data), k, "Error!")
-    
 
+    assert len(data) > k

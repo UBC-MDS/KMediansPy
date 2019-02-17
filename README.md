@@ -1,3 +1,6 @@
+<img src="/images/py_badge.png" width="300" align = "right">
+
+# KMediansPy
 
 | **Team Members** |
 | -- |
@@ -5,8 +8,6 @@
 | [Ayla Pearson](https://github.com/aylapear) |
 | [Fan Nie](https://github.com/Jamienie)  |
 | [Ting Pan](https://github.com/panntingg) |
-
-<img src="/images/py_badge.png" width="300" align = "right">
 
 # About
 

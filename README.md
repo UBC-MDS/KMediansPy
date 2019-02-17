@@ -4,6 +4,10 @@
 
 A python package for KMedians Clustering
 
+# About
+
+Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). In k-medians clustering, we partition `n` observations into `k` clusters. It calculates the median for each cluster to determine its centroid. The `KMediansPy` package performs k-medians clustering on the dataset entered by the users and returns the clustered data.. This can prove to be an extremely beneficial package as k-medians is more robust to outliers than the arithmetic mean(k-means). The objective of this package is to provide a robust clustering method to solve some of the issues related to outliers and missing data.
+
 | **Team Members** |
 | -- |
 | [Sreya Guha](https://github.com/sreyaguha) |
@@ -11,9 +15,6 @@ A python package for KMedians Clustering
 | [Fan Nie](https://github.com/Jamienie)  |
 | [Ting Pan](https://github.com/panntingg) |
 
-# About
-
-Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). In k-medians clustering, we partition `n` observations into `k` clusters. It calculates the median for each cluster to determine its centroid. The `KMediansPy` package performs k-medians clustering on the dataset entered by the users and returns the clustered data.. This can prove to be an extremely beneficial package as k-medians is more robust to outliers than the arithmetic mean(k-means). The objective of this package is to provide a robust clustering method to solve some of the issues related to outliers and missing data.
 
 # Functions included
 

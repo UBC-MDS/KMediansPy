@@ -1,4 +1,6 @@
 
+<img src="/images/py_badge.png" width="400" align = "right">
+
 | **Team Members** |
 | -- |
 | [Sreya Guha](https://github.com/sreyaguha) |
@@ -6,8 +8,6 @@
 | [Fan Nie](https://github.com/Jamienie)  |
 | [Ting Pan](https://github.com/panntingg) |
 
-
-<img src="/images/py_badge.png" width="200" align = "right">
 
 
 # About

@@ -2,6 +2,8 @@
 
 # KMediansPy
 
+A python package for KMedians Clustering
+
 | **Team Members** |
 | -- |
 | [Sreya Guha](https://github.com/sreyaguha) |

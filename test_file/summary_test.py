@@ -38,7 +38,7 @@ def test_number_of_points_in_clusters():
     medians, labels = KMedians(data, k)
     df = summary(data, medians, labels)
 
-    assert np.equal(df['Number of points in a cluster'].sum(), data.shape[0])
+    assert np.equal(df['Number of Points in a Cluster'].sum(), data.shape[0])
 
 
 
@@ -51,3 +51,4 @@ def test_number_of_clusters():
     df = summary(data, medians, labels)
 
     assert np.equal(len(df['Cluster Label']), k)
+    

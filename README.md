@@ -78,11 +78,11 @@ pip install git+https://github.com/UBC-MDS/KMediansPy.git
 >> med = np.array([[1, 2]])
 >> labels = [0, 0]
 >> y = summary(X, med, labels )
->> print(y)
-
->>	Cluster Label	| X Coordinates of Final Medians | Y Coordinates of Final Medians	| Number of Points in a Cluster	| Average Distance within Cluster
->>  0	            | 0	                             | 1	                            | 2	                            | 2	                              
+>> print(y)                              
  ```
+![Summary output Table](images/summary_output.png)
+
+
 
 # Run tests
 

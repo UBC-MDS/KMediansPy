@@ -7,6 +7,7 @@
 
 import pytest
 import numpy as np
+from KMediansPy.distance import distance
 
 
 ## Helper Functions
@@ -59,9 +60,16 @@ def test_correct_input_type():
     X, medians, dist = toy_data()
     # check the type of the input/outputs are numpy arrays
     assert type(X) == np.ndarray
-    assert type(medians) == np.ndarry
-    assert type(dist) == np.ndarry
+    assert type(medians) == np.ndarray
+    assert type(dist) == np.ndarray
     # check that the input/outputs are 2D
     assert X.ndim == 2
     assert medians.ndim == 2
     assert dist.ndim == 2
+
+
+#%%
+    
+test_dist_each_point()
+test_dist_each_cluster()
+test_correct_input_type()

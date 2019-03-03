@@ -31,7 +31,7 @@ def test_distance_calc():
     simple toy dataset where the distances were calculated manually
     """
     _, _, dist = toy_data()
-    assert dist == np.array([[6, 0], [0, 6]])
+    assert np.all(dist) == np.all(np.array([[6, 0], [0, 6]]))
 
 
 
@@ -69,7 +69,7 @@ def test_correct_input_type():
 
 
 #%%
-    
+
 test_dist_each_point()
 test_dist_each_cluster()
 test_correct_input_type()

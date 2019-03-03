@@ -80,7 +80,6 @@ pip install git+https://github.com/UBC-MDS/KMediansPy.git
 >> y = summary(X, med, labels )
 >> print(y)                              
  ```
-![Summary output Table](images/summary_output.PNG)
 <img src="images/summary_output.PNG" width="900">
 
 

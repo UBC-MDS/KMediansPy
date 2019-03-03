@@ -66,10 +66,3 @@ def test_correct_input_type():
     assert X.ndim == 2
     assert medians.ndim == 2
     assert dist.ndim == 2
-
-
-#%%
-
-test_dist_each_point()
-test_dist_each_cluster()
-test_correct_input_type()

@@ -90,3 +90,4 @@ From root directory, run all test files in terminal:
 ```
 python -m pytest
 ```
+![](images/pytest.PNG)

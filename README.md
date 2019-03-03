@@ -81,7 +81,7 @@ pip install git+https://github.com/UBC-MDS/KMediansPy.git
 >> print(y)                              
  ```
 ![Summary output Table](images/summary_output.PNG)
-
+<img src="images/summary_output.PNG" width="300">
 
 
 # Run tests

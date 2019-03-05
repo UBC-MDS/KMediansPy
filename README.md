@@ -4,7 +4,7 @@
 
 # KMediansPy
 
-A python package for KMedians Clustering
+A python package for KMedians Clustering.
 
 # About
 

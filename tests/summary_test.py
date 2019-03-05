@@ -57,7 +57,7 @@ def test_number_of_clusters():
 
     
     
-def correct_input_type():
+def test_correct_input_type():
     """
     Tests the input types for summary are numpy arrays
     """
@@ -70,7 +70,7 @@ def correct_input_type():
 
     
     
-def correct_output_type():
+def test_correct_output_type():
     """
     Tests that summary outputs a dataframe
     """

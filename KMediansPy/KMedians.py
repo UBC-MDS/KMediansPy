@@ -8,7 +8,7 @@ import random as random
 from KMediansPy.distance import distance
 
 
-def KMedians(x, n_cluster):
+def KMedians(x:np.ndarray, n_cluster:int):
     """
     Groups the points in your dataset ,X, into the desired number of clusters, based on the median distance between the points.
     This function uses random intilization to assign the first medians and then will update the medians and

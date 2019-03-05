@@ -10,7 +10,7 @@ from KMediansPy.distance import distance
 
 
 
-def summary(x, medians, labels):
+def summary(x:np.ndarray, medians:np.ndarray, labels:np.ndarray) -> pd.DataFrame:
     """
     Generates a table to display the cluster labels, the x and y coordinates of the cluster medians,
     number of points in each cluster, the average distance within the cluster,
@@ -36,7 +36,7 @@ def summary(x, medians, labels):
         Minimum Distance within Cluster, Maximum Distance within Cluster
 
     """
-      # cluster labels for table
+    # cluster labels for table
     cluster_labels = np.unique(labels)
 
     #x & y coordinates for table

@@ -5,7 +5,7 @@
 
 import numpy as np
 
-def distance(x, medians):
+def distance(x:np.ndarray, medians:np.ndarray) -> np.ndarray:
     """
     Calculates the Manhanttan distance between the medians and every point in the dataset
 

@@ -11,8 +11,11 @@ python:
 install:
   - pip install git+https://github.com/UBC-MDS/KMediansPy.git
   - pip install -U pytest
+  - pip install numpy
+  - pip install pandas
 
 
 
 script:
+  - cd tests/
   - pytest

@@ -9,7 +9,7 @@ python:
 
 
 install:
-  - pip install git+https://github.com/UBC-MDS/KMediansPy.git
+  - pip install git+https://github.com/UBC-MDS/KMediansPy.git@master
   - pip install -U pytest
   - pip install numpy
   - pip install pandas

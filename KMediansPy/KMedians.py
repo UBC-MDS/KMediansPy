@@ -8,7 +8,7 @@ import random as random
 from KMediansPy.distance import distance
 
 
-def KMedians(x:np.ndarray, n_cluster:int):
+def KMedians(x, n_cluster):
     """
     Groups the points in your dataset ,X, into the desired number of clusters, based on the median distance between the points.
     This function uses random intilization to assign the first medians and then will update the medians and
@@ -31,6 +31,23 @@ def KMedians(x:np.ndarray, n_cluster:int):
         Array that has the assignment of the cluster for each point in the dataset
 
     """
+    if not isinstance(x, np.ndarray):
+        raise TypeError("Dataset is not an array")
+
+    if x.shape[0] == 0:
+       raise IndexError("Dataset is empty")
+
+    if x.ndim > 2:
+        raise IndexError("Dataset should be of order mx2")
+
+    if x.shape[1] > 2:
+       raise IndexError("Dataset should be of order mx2")
+
+    if x.ndim == 1:
+        raise IndexError("Data needs second dimension")
+
+    if n_cluster <= 0:
+        raise ValueError("Number of desired clusters should be greater than 0")
 
     n = x.shape[0]
     u = np.zeros((n_cluster,n),dtype='int32')

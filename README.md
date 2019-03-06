@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/aylapear/DSCI_524_K_Medians_Python.svg?branch=master)](https://travis-ci.org/aylapear/DSCI_524_K_Medians_Python)
 
 <img src="/images/py_badge.png" width="300" align = "right">
 

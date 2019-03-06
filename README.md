@@ -1,8 +1,10 @@
+[![Build Status](https://travis-ci.com/sreyaguha/DSCI_524_K_Medians_Python.svg?branch=master)](https://travis-ci.com/sreyaguha/DSCI_524_K_Medians_Python)
+
 <img src="/images/py_badge.png" width="300" align = "right">
 
 # KMediansPy
 
-A python package for KMedians Clustering
+A python package for KMedians Clustering.
 
 # About
 

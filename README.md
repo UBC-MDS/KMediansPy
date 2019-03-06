@@ -1,8 +1,8 @@
+[![Build Status](https://travis-ci.org/UBC-MDS/KMediansPy.svg?branch=master)](https://travis-ci.org/UBC-MDS/KMediansPy)
+
 <img src="/images/py_badge.png" width="300" align = "right">
 
 # KMediansPy
-
-[![Build Status](https://travis-ci.org/UBC-MDS/KMediansPy.svg?branch=master)](https://travis-ci.org/UBC-MDS/KMediansPy)
 
 A python package for KMedians Clustering.
 

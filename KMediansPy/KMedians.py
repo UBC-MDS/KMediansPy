@@ -34,7 +34,7 @@ def KMedians(x, n_cluster):
     if not isinstance(x, np.ndarray):
         raise TypeError("Dataset is not an array")
 
-    if x.shape[0] == 0:
+    if x.shape[0] <= 0:
        raise IndexError("Dataset is empty")
 
     if x.ndim > 2:
@@ -43,7 +43,7 @@ def KMedians(x, n_cluster):
     if x.shape[1] > 2:
        raise IndexError("Dataset should be of order mx2")
 
-    if x.ndim == 1:
+    if x.ndim <= 1:
         raise IndexError("Data needs second dimension")
 
     if n_cluster <= 0:

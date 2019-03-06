@@ -36,6 +36,35 @@ def summary(x:np.ndarray, medians:np.ndarray, labels:np.ndarray) -> pd.DataFrame
         Minimum Distance within Cluster, Maximum Distance within Cluster
 
     """
+    # raises typeerror for 3 inputs
+    if not isinstance(x, np.ndarray):
+        raise TypeError("dataset is not an array")
+    
+    if not isinstance(medians, np.ndarray):
+        raise TypeError("medians is not an array")
+    
+    if not isinstance(labels, np.ndarray):
+        raise TypeError("labels is not an array")    
+    
+    # raises index error if the shape is not correct
+    if x.shape[0] == 0:
+        raise IndexError("Data set is empty")
+        
+    if x.ndim > 2:
+        raise IndexError("Data has too many dimensions")
+        
+    if x.ndim == 1:
+        raise IndexError("Data needs second dimension")
+    
+    if medians.shape[0] == 0:
+        raise IndexError("There are no medians coordinates")
+        
+    if labels.shape[0] == 0:
+        raise IndexError("There are no labels for your clusters")
+
+    
+    
+    
     # cluster labels for table
     cluster_labels = np.unique(labels)
 

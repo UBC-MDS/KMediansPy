@@ -1,21 +1,4 @@
 language: python
 
-
-
 python:
-  - "3.5"
-  - "3.6"
-
-
-
-install:
-  - pip install git+https://github.com/UBC-MDS/KMediansPy.git@master
-  - pip install -U pytest
-  - pip install numpy
-  - pip install pandas
-
-
-
-script:
-  - cd tests/
-  - pytest
+  - "3.7.0"

@@ -46,6 +46,9 @@ def KMedians(x, n_cluster):
     if x.ndim <= 1:
         raise IndexError("Data needs second dimension")
 
+    if not isinstance(n_cluster, int):
+        raise TypeError("Number of desired clusters should be an integer")
+
     if n_cluster <= 0:
         raise ValueError("Number of desired clusters should be greater than 0")
 

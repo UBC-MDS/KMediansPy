@@ -30,16 +30,16 @@ def distance(x, medians):
     if not isinstance(medians, np.ndarray):
         raise TypeError("Median values entered is not an array")
 
-     if x.shape[0] <= 0:
+    if x.shape[0] <= 0:
         raise IndexError("Dataset is empty")
 
     if x.shape[1] > 2:
-       raise IndexError("Dataset should be of order mx2")
+        raise IndexError("Dataset should be of order mx2")
 
     if x.ndim <= 1:
         raise IndexError("Data needs second dimension")
 
-     if medians.shape[0] <= 0:
+    if medians.shape[0] <= 0:
         raise IndexError("No median values entered")
 
     k = medians.shape[0] #number of rows in the medians array

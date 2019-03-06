@@ -5,7 +5,7 @@
 
 import numpy as np
 
-def distance(x:np.ndarray, medians:np.ndarray) -> np.ndarray:
+def distance(x, medians):
     """
     Calculates the Manhanttan distance between the medians and every point in the dataset
 
@@ -23,6 +23,25 @@ def distance(x:np.ndarray, medians:np.ndarray) -> np.ndarray:
         Distance between each point and each median
 
     """
+
+    if not isinstance(x, np.ndarray):
+        raise TypeError("Dataset is not an array")
+
+    if not isinstance(medians, np.ndarray):
+        raise TypeError("Median values entered is not an array")
+
+     if x.shape[0] == 0:
+        raise IndexError("Dataset is empty")
+
+    if x.shape[1] > 2:
+       raise IndexError("Dataset should be of order mx2")
+
+    if x.ndim == 1:
+        raise IndexError("Data needs second dimension")
+
+     if medians.shape[0] == 0:
+        raise IndexError("No median values entered")
+
     k = medians.shape[0] #number of rows in the medians array
     n = x.shape[0] #number of columns in the dataset
     distance = np.zeros((n,k),dtype='int32')

@@ -59,14 +59,3 @@ def test_number_of_clusters():
     medians, labels = KMedians(data, k)
 
     assert np.equal(np.size(medians[0],0), k)
-
-
-def test_edge_case_1():
-
-    """
-
-    Tests that the algorithm has more rows than the number of clusters
-
-    """
-
-    assert len(data) > k

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='KMediansPy',
-    version='1.0',
+    version='1.1',
     author='S. Guha, A. Pearson, F. Nie, T. Pan',
     author_email='NA',
     packages=['KMediansPy'],

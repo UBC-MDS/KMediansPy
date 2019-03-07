@@ -1,16 +1,19 @@
 Metadata-Version: 1.0
 Name: KMediansPy
-Version: 1.0
+Version: 1.1
 Summary: K Medians Clustering Algorithm and table summary
 Home-page: https://github.com/UBC-MDS/KMediansPy
 Author: S. Guha, A. Pearson, F. Nie, T. Pan
 Author-email: NA
 License: LICENSE.txt
-Description: <img src="/images/py_badge.png" width="300" align = "right">
+Description: 
+        
+        
+        <img src="/images/py_badge.png" width="300" align = "right">
         
         # KMediansPy
         
-        A python package for KMedians Clustering
+        A python package for KMedians Clustering.
         
         # About
         
@@ -86,11 +89,10 @@ Description: <img src="/images/py_badge.png" width="300" align = "right">
         >> med = np.array([[1, 2]])
         >> labels = [0, 0]
         >> y = summary(X, med, labels )
-        >> print(y)
-        
-        >>	Cluster Label	| X Coordinates of Final Medians | Y Coordinates of Final Medians	| Number of Points in a Cluster	| Average Distance within Cluster
-        >>  0	            | 0	                             | 1	                            | 2	                            | 2	                              
+        >> print(y)                              
          ```
+        <img src="images/summary_output.PNG" width="900">
+        
         
         # Run tests
         
@@ -99,5 +101,6 @@ Description: <img src="/images/py_badge.png" width="300" align = "right">
         ```
         python -m pytest
         ```
+        ![](images/pytest.PNG)
         
 Platform: UNKNOWN

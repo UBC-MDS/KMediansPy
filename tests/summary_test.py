@@ -5,6 +5,7 @@
 
 
 import numpy as np
+import pandas as pd
 import pytest
 from KMediansPy.summary import summary
 from KMediansPy.KMedians import KMedians
@@ -30,9 +31,9 @@ def test_toy_data_summary():
     assert np.equal(df['Number of Points in a Cluster'].sum(), 4), "Number of Points in a Cluster doesn't match"
     assert np.equal(round(df['Average Distance within Cluster'].sum(), 2), 2.67), "Average Distance within Cluster doesn't match"
     assert np.equal(df['Maxiumum Distance within Cluster'].sum(), 3.0), "Maxiumum Distance within Cluster doesn't match"
-    assert np.equal(df['Minimum Distance within Cluster'].sum(), 2.0), "Minimum Distance within Cluster doesn't match" 
+    assert np.equal(df['Minimum Distance within Cluster'].sum(), 2.0), "Minimum Distance within Cluster doesn't match"
 
-    
+
 def test_number_of_points_in_clusters():
     """
     Tests that the algorithm preserves the total number of data points
@@ -55,21 +56,21 @@ def test_number_of_clusters():
 
     assert np.equal(len(df['Cluster Label']), k), 'Number of clusters does not match input k'
 
-    
-    
+
+
 def test_correct_input_type():
     """
     Tests the input types for summary are numpy arrays
     """
     medians, labels = KMedians(data, k)
     df = summary(data, medians, labels)
-    
+
     assert isinstance(data, np.ndarray), 'Data is not a numpy array'
     assert isinstance(labels, np.ndarray), 'Labels is not a numpy array'
     assert isinstance(medians, np.ndarray), 'Medians is not a numpy array'
 
-    
-    
+
+
 def test_correct_output_type():
     """
     Tests that summary outputs a dataframe
@@ -78,4 +79,3 @@ def test_correct_output_type():
     df = summary(data, medians, labels)
 
     assert isinstance(df, pd.DataFrame), 'Output is not a dataframe'
-    

@@ -1,0 +1,12 @@
+language: python
+
+
+
+python:
+  - "3.6.5"
+
+install:
+  - pip install git+https://github.com/UBC-MDS/KMediansPy.git
+  - pip install -U pytest
+
+script: pytest

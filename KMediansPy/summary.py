@@ -36,33 +36,34 @@ def summary(x:np.ndarray, medians:np.ndarray, labels:np.ndarray) -> pd.DataFrame
         Minimum Distance within Cluster, Maximum Distance within Cluster
 
     """
-    # raises typeerror for 3 inputs
+    # raises typeerror for each inputs
     if not isinstance(x, np.ndarray):
-        raise TypeError("dataset is not an array")
-    
+        raise TypeError("x is not an array")
     if not isinstance(medians, np.ndarray):
         raise TypeError("medians is not an array")
-    
     if not isinstance(labels, np.ndarray):
         raise TypeError("labels is not an array")    
-    
-    
-    # raises index error if the shape is not correct
+    # raises index error if the inputs are empty
     if x.shape[0] == 0:
-        raise IndexError("Data set is empty")
-        
-    if x.ndim > 2:
-        raise IndexError("Data has too many dimensions")
-        
-    if x.ndim == 1:
-        raise IndexError("Data needs second dimension")
-    
+        raise IndexError("x is empty")
     if medians.shape[0] == 0:
         raise IndexError("There are no medians coordinates")
-        
     if labels.shape[0] == 0:
         raise IndexError("There are no labels for your clusters")
-
+    # raises index error if there is the dimensions are not 2 for x and medians
+    if x.ndim > 2:
+        raise IndexError("x has too many dimensions")
+    if x.ndim == 1:
+        raise IndexError("x needs second dimension")
+    if medians.ndim > 2:
+        raise IndexError("Medians has too many dimensions")
+    if medians.ndim == 1:
+        raise IndexError("Medians needs second dimension")
+    # raises index error if there is not an Y coordinate for x and medians
+    if x.shape[1] != 2:
+        raise IndexError("x is missing Y coordinate")
+    if medians.shape[1] != 2:
+        raise IndexError("medians is missing Y coordinate")
     
     
     

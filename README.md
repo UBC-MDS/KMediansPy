@@ -20,27 +20,21 @@ Cluster analysis or clustering is the task of grouping a set of objects in such 
 
 # Functions included
 
-The three main functions in the package are :
+The three functions in the package are :
 
 1. `distance` function
 
-      - The function helps to calculate the Manhattan distance between each pair of the two collection inputs. This function takes as input
-      1. An `mxn` array of `m` original observations in an `n`-dimensional space
-      2. An `pxk` array of `p` original observations in an `k`-dimensional space
-      It returns a `mxp` distance matrix. For each `i` and `j`, the mteric `distance(u=X[i], v=Y[j])` is computed and stored in the `ij`th entry
+      - Calculates the Manhattan distance between the medians and every point in the dataset
 
 2. `KMedians` function
 
-      - A quick implementation of k-medians. It takes as input
-        1. A 2D array of order mx2
-        2. The desired number of clusters
-      It returns
-        1. A 2D array of the medians
-        2. 1D array of labels (the clusters the points belongs to)
+      - Groups the points in your dataset ,X, into the desired number of clusters, based on the median distance between the points.
+    This function uses random intilization to assign the first medians and then will update the medians and
+    the group assignments until the assignment does not change.
 
 3. `summary` function
 
-      - This function generates the descriptive statistics that summarize the implementation of the `KMedians` function on the input data. It returns a      dataframe that contains information about the model run such as the number of clusters, the number of points in each cluster, the inter and intra       cluster distance
+      - Generates the descriptive statistics that summarize the implementation of the `KMedians` function on the input data. It returns a dataframe that contains information about the model run such as the number of clusters, the number of points in each cluster, the X and Y coordinates of the final medians, the average distance within a cluster, the maximum distance within a cluster and the minimum within the cluster. 
 
 
 # Usage Scenario
